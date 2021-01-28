@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <title>Maxi Guerrero - Ejercicios Con Python</title>
+</head>
+<body>
+    <!---Head-nav-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border border-dark">
+        <div class="container-md">
+          <a class="navbar-brand" href="/">Maximiliano Raúl Guerrero</a>
+        </div>
+    </nav>
+    <!--Introduccion-->
+    <div class="container-sm ejercicio border border-dark">
+        <div class="row">
+            <div class="col-sm">
+                <img src="https://elfreneticoinformatico.com/wp-content/uploads/2017/05/CODIGO-FUENTE.png" class="img-fluid mt-2 mb-2 center">
+            </div>
+            <div class="col-sm mt-2 mb-2">
+              <p>Esta pagina contiene la resolución de problemas de ejercicios relacionados con la programación, usted podrá ver el código que resuelve el problema escrito por mi en lenguaje Python y poder interactuar con la funcionalidad.<br>
+            </p>
+            </div>
+          </div>
+    </div>
+    <!---Ejercicio 1-->
+    <div class="container-sm ejercicio border border-dark mt-3">
+        <div class="row">
+          <h3>Ejercicio 1</h3>
+        </div>
+        <div class="row">
+            <p>Se debe multiplicar dos números sin utilizar el signo de multiplicación, solo se deben aceptar valores enteros.</p>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Código</h3>
+                </div>
+                <div class="row">
+                    <pre>
+def ejercicio1(a,b):
+i = abs(b)
+resultado = 0
+positivo = abs(b) == b
+c = a*-1 if positivo == False else a
+while i>0:
+    resultado = resultado + c
+    i = i - 1
+return 'El resultado de {}'.format(a) + ' por ' + str(b) + ' es ' + str(resultado)
+                    </pre>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Salida</h3>
+                </div>
+                <div class="row salida border border-dark">
+                    <div class="container" style="height:100px">
+                        <samp id="respuesta_ejercicio1">Ingrese los datos necesario y presione el boton "Run"</samp>
+                    </div>
+                </div>
+                <form class="row g-3 mt-4" method="POST" id="form_ejercicio1">
+                    <div class="row mt-1">
+                        <h4 class="text-center">Ingrese los datos necesarios</h4>
+                    </div>
+                    <div class="row">
+                        <label for="variable1" class="col-form-label col-sm-3 mt-1">Primer numero</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="variable1" name="variable1">
+                        </div>
+                        <label for="variable2" class="col-form-label col-sm-3 mt-1">Segundo numero</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="variable2" name="variable2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm text-center">
+                            <button type="button" id="enviar_ejercicio1" class="btn btn-primary mb-3">Run</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>  
+              <!---Ejercicio 2-->
+    <div class="container-sm ejercicio border border-dark mt-3">
+        <div class="row">
+          <h3>Ejercicio 2</h3>
+        </div>
+        <div class="row">
+            <p>Obtener el numero mayor en un arreglo, pero solo iterando una sola vez el arreglo.<br>
+                Se debe escribir la secuencia de numeros separados por una coma.<br>
+                Ejemplo: 5,1,80,95,47,21,50
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Código</h3>
+                </div>
+                <div class="row">
+                    <pre>
+def mayorNumero(array):
+array.sort()
+elem = array.pop()
+return 'El numero mas grande de la lista es: '+str(elem)
+                    </pre>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Salida</h3>
+                </div>
+                <div class="row salida border border-dark">
+                    <div class="container" style="height:100px">
+                        <samp id="respuesta_ejercicio2">Ingrese los datos necesario y presione el boton "Run"</samp>
+                    </div>
+                </div>
+                <form class="row g-3 mt-4" method="POST" id="form_ejercicio2">
+                    <div class="row mt-1">
+                        <h4 class="text-center">Ingrese los datos necesarios</h4>
+                    </div>
+                    <div class="row">
+                        <label for="variable1_ejercicio2" class="col-form-label col-sm-3 mt-1">Lista de numeros</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="variable1_ejercicio2" name="variable1_ejercicio2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm text-center">
+                            <button type="button" id="enviar_ejercicio2" class="btn btn-primary mb-3">Run</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+          </div>
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{url_for('static',filename='js/main.js')}}"></script>
+</body>
+</html>
