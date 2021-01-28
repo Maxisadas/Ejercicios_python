@@ -16,4 +16,4 @@ To run the project, you must initialize the server then to go http://localhost:5
 
 ## Contact
 
-[Linkdin](www.linkedin.com/in/maximiliano-guerrero-a90264137).
+[Linkdin](http://www.linkedin.com/in/maximiliano-guerrero-a90264137).
