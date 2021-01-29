@@ -37,4 +37,24 @@ $(document).ready(function() {
       })
 
    })
+
+   $('#enviar_ejercicio3').click(function(){
+      const data = {
+         "variable1":$('#variable1_ejercicio3').val(),
+      }
+      $.ajax({
+         url:'/ejercicio3',
+         type:'POST',
+         dataTyoe:'json',
+         data:data,
+         success: function(res){
+            $('#respuesta_ejercicio3').html(res);
+         },
+         error: function(XMLHttpRequest, textStatus, errorThrown) { 
+            alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+        }   
+      })
+
+   })
+
 });

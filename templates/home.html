@@ -140,6 +140,65 @@ return 'El numero mas grande de la lista es: '+str(elem)
             </div>
           </div>
     </div>
+        <!---Ejercicio 3-->
+    <div class="container-sm ejercicio border border-dark mt-3">
+        <div class="row">
+          <h3>Ejercicio 3</h3>
+        </div>
+        <div class="row">
+            <p>Escribir una función que cuente la cantidad de veces que se repite una palabra.<br>
+            Ejemplo: Hola como estas estas estas hola Como</p>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Código</h3>
+                </div>
+                <div class="row">
+                    <pre>
+def contar_repeticiones(string):
+    lowercase = string.lower()
+    array = lowercase.split(' ')
+    counted = []
+    message = ''
+    for element in array:
+        if element not in counted:
+            count = array.count(element)
+            counted.append(element)
+            message += '\n'+element + ': ' + str(count)
+    return message
+                    </pre>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Salida</h3>
+                </div>
+                <div class="row salida border border-dark">
+                    <div class="container" style="height:100px">
+                        <samp id="respuesta_ejercicio3">Ingrese los datos necesario y presione el boton "Run"</samp>
+                    </div>
+                </div>
+                <form class="row g-3 mt-4" method="POST" id="form_ejercicio3">
+                    <div class="row mt-1">
+                        <h4 class="text-center">Ingrese los datos necesarios</h4>
+                    </div>
+                    <div class="row">
+                        <label for="variable1_ejercicio3" class="col-form-label col-sm-3 mt-1">Escriba palabras</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="variable1_ejercicio3" name="variable1_ejercicio3">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm text-center">
+                            <button type="button" id="enviar_ejercicio3" class="btn btn-primary mb-3">Run</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>  
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

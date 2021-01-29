@@ -24,6 +24,13 @@ def ejercicio2():
         return 'No se permite letras ni caracteres especiales'
     variable1 = array.toArrayOfNumber(string)
     return index.mayorNumero(variable1)
+@app.route('/ejercicio3',methods=['POST'])
+def ejercicio3():
+    string = str(request.form['variable1'])
+    found = re.search('[^A-Za-z0-9 ]+', string)
+    if found:
+        return 'No se permite caracteres especiales'
+    return index.contar_repeticiones(string)
 
 if __name__ == '__main__':
     app.run(debug=True)
