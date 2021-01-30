@@ -57,4 +57,43 @@ $(document).ready(function() {
 
    })
 
+   $('#enviar_ejercicio4').click(function(){
+      const data = {
+         "variable1":$('#variable1_ejercicio4').val(),
+      }
+      $.ajax({
+         url:'/ejercicio4',
+         type:'POST',
+         dataTyoe:'json',
+         data:data,
+         success: function(res){
+            $('#respuesta_ejercicio4').html(res);
+         },
+         error: function(XMLHttpRequest, textStatus, errorThrown) { 
+            alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+        }   
+      })
+
+   })
+
+   $('#enviar_ejercicio5').click(function(){
+      const data = {
+         "variable1":$('#variable1_ejercicio5').val(),
+         "variable2":$('#variable2_ejercicio5').val(),
+      }
+      $.ajax({
+         url:'/ejercicio5',
+         type:'POST',
+         dataTyoe:'json',
+         data:data,
+         success: function(res){
+            $('#respuesta_ejercicio5').html(res);
+         },
+         error: function(XMLHttpRequest, textStatus, errorThrown) { 
+            alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+        }   
+      })
+
+   })
+
 });

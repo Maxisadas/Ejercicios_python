@@ -31,6 +31,22 @@ def ejercicio3():
     if found:
         return 'No se permite caracteres especiales'
     return index.contar_repeticiones(string)
+@app.route('/ejercicio4',methods=['POST'])
+def ejercicio4():
+    string = str(request.form['variable1'])
+    found = re.search('[^A-Za-z0-9 ]+', string)
+    if found:
+        return 'No se permite caracteres especiales'
+    return index.isPalindrome(string)
+@app.route('/ejercicio5',methods=['POST'])
+def ejercicio5():
+    string1 = str(request.form['variable1'])
+    string2 = str(request.form['variable2'])
+    found1 = re.search('[^0-9,-]+', string1)
+    found2 = re.search('[^0-9,-]+', string2)
+    if found1 or found2:
+        return 'No se permite caracteres especiales'
+    return index.median(string1.split(','),string2.split(','))
 
 if __name__ == '__main__':
     app.run(debug=True)

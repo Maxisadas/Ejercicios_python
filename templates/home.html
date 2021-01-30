@@ -199,6 +199,125 @@ def contar_repeticiones(string):
             </div>
           </div>
         </div>  
+                <!---Ejercicio 4-->
+    <div class="container-sm ejercicio border border-dark mt-3">
+        <div class="row">
+          <h3>Ejercicio 4</h3>
+        </div>
+        <div class="row">
+            <p>Verificar si una cadena de texto es un palíndromo.<br>Ejemplo: Acurruca</p>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Código</h3>
+                </div>
+                <div class="row">
+                    <pre>
+def isPalindrome(string):
+    lowercase = string.lower()
+    stringRight = lowercase.replace(' ','')
+    stringReversed = stringRight [::-1]
+    if stringRight == stringReversed:
+        return 'La palabra '+string+' es un palíndromo'
+    else:
+        return 'La palabra '+string+' NO es un palíndromo'
+                    </pre>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Salida</h3>
+                </div>
+                <div class="row salida border border-dark">
+                    <div class="container" style="height:100px">
+                        <samp id="respuesta_ejercicio4">Ingrese los datos necesario y presione el boton "Run"</samp>
+                    </div>
+                </div>
+                <form class="row g-3 mt-4" method="POST" id="form_ejercicio4">
+                    <div class="row mt-1">
+                        <h4 class="text-center">Ingrese los datos necesarios</h4>
+                    </div>
+                    <div class="row">
+                        <label for="variable1_ejercicio4" class="col-form-label col-sm-3 mt-1">Escriba palabras</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="variable1_ejercicio4" name="variable1_ejercicio4">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm text-center">
+                            <button type="button" id="enviar_ejercicio4" class="btn btn-primary mb-3">Run</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+                      <!---Ejercicio 5-->
+    <div class="container-sm ejercicio border border-dark mt-3">
+        <div class="row">
+          <h3>Ejercicio 5</h3>
+        </div>
+        <div class="row">
+            <p>De dos listas de numeros, se debe calcular la media aritmetica total.<br>
+                Por ejemplo: <br>Lista1 = 1,2<br>
+                             Lista2 = 3,4<br>
+                             La media aritmetica es: 2,5
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Código</h3>
+                </div>
+                <div class="row">
+                    <pre>
+def median(array1,array2):
+    joinArray = array1 + array2
+    n = len(joinArray)
+    suma = 0
+    for elemento in joinArray:
+        suma += 0 + float(elemento)
+    return 'La media aritmetica es: '+ str(suma/n)
+                    </pre>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="row">
+                    <h3 class="text-center">Salida</h3>
+                </div>
+                <div class="row salida border border-dark">
+                    <div class="container" style="height:100px">
+                        <samp id="respuesta_ejercicio5">Ingrese los datos necesario y presione el boton "Run"</samp>
+                    </div>
+                </div>
+                <form class="row g-3 mt-4" method="POST" id="form_ejercicio5">
+                    <div class="row mt-1">
+                        <h4 class="text-center">Ingrese los datos necesarios</h4>
+                    </div>
+                    <div class="row">
+                        <label for="variable1_ejercicio5" class="col-form-label col-sm-3 mt-1">Primera lista de numeros</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="variable1_ejercicio5" name="variable1_ejercicio5">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="variable2_ejercicio5" class="col-form-label col-sm-3 mt-1">Segunda Lista de numeros</label>
+                        <div class="col-sm-9">
+                        <input type="text" class="form-control" id="variable2_ejercicio5" name="variable2_ejercicio5">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm text-center">
+                            <button type="button" id="enviar_ejercicio5" class="btn btn-primary mb-3">Run</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+          </div>
+    </div>  
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
